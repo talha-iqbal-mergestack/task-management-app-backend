@@ -26,7 +26,8 @@ export const validateBody = (schema: Joi.ObjectSchema<any>) => {
 		if (err) {
 			response.body = err;
 			response.message = constants.requestValidationMessage.BAD_REQUEST;
-			return res.status(response.status).send(response);
+			res.status(response.status).send(response);
+			return;
 		}
 		return next();
 	};
@@ -39,7 +40,8 @@ export const validateQueryParams = (schema: Joi.ObjectSchema<any>) => {
 		if (err) {
 			response.body = err;
 			response.message = constants.requestValidationMessage.BAD_REQUEST;
-			return res.status(response.status).send(response);
+			res.status(response.status).send(response);
+			return;
 		}
 		return next();
 	};
