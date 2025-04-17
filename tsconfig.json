@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"target": "ESNext",
+		"noImplicitAny": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"sourceMap": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"strict": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
+		"outDir": "dist",
+		"baseUrl": "src" /* Base directory to resolve non-absolute module names. */,
+		"paths": {
+			"@apiSchema/*": ["apiSchema/*"],
+			"@constants/*": ["constants/*"],
+			"@database/*": ["database/*"],
+			"@middleware/*": ["middleware/*"],
+			"@resources/*": ["resources/*"],
+			"@utils/*": ["utils/*"]
+		}
+	}
+}
