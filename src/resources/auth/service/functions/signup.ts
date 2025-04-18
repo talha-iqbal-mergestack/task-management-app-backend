@@ -8,7 +8,7 @@ import BadRequest from '@utils/errors/bad-request';
 export const signup = async ({ email, password }: UserCredentials) => {
 	const user = await User.findOne({ email });
 	if (user) {
-		throw new BadRequest(constants.userMessage.DUPLICATE_EMAIL);
+		throw new BadRequest(constants.authMessage.DUPLICATE_EMAIL);
 	}
 
 	const hashedPassword = await bcrypt.hash(password, 12);

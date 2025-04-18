@@ -11,7 +11,7 @@ export default {
 		PRODUCT_DELETED: 'Product deleted successfully',
 		PRODUCT_NOT_FOUND: 'Product not found'
 	},
-	userMessage: {
+	authMessage: {
 		SIGNUP_SUCCESS: 'Signup success',
 		SIGNIN_SUCCESS: 'Signin success',
 		DUPLICATE_EMAIL: 'User already exists with given email',
