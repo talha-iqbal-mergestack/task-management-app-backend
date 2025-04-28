@@ -11,6 +11,13 @@ export default {
 		PRODUCT_DELETED: 'Product deleted successfully',
 		PRODUCT_NOT_FOUND: 'Product not found'
 	},
+	taskMessage: {
+		TASK_CREATED: 'Task created successfully',
+		TASK_FETCHED: 'Task fetched successfully',
+		TASK_UPDATED: 'Task updated successfully',
+		TASK_DELETED: 'Task deleted successfully',
+		TASK_NOT_FOUND: 'Task not found'
+	},
 	authMessage: {
 		SIGNUP_SUCCESS: 'Signup success',
 		SIGNIN_SUCCESS: 'Signin success',

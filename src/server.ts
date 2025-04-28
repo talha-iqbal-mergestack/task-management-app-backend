@@ -12,6 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use('/api/v1/auth', require('@resources/auth/auth.router'));
 app.use('/api/v1/products', require('@resources/product/product.router'));
+app.use('/api/v1/tasks', require('@resources/task/task.router'));
 app.use(errorHandler);
 
 app.get('/', (req, res) => {
