@@ -3,7 +3,11 @@ import { Schema, model } from 'mongoose';
 const taskSchema = new Schema(
 	{
 		name: String,
-		completed: Boolean
+		completed: Boolean,
+		_creator: {
+			type: Schema.Types.ObjectId,
+			ref: 'User'
+		}
 	},
 	{
 		timestamps: true,

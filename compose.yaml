@@ -16,7 +16,7 @@ services:
       DB_URI: mongodb://root:example@mongodb:27017/test-db?authSource=admin
       SECRET_KEY: ${SECRET_KEY}
     ports:
-      - 3000:3000
+      - 5000:5000
     depends_on:
       - mongodb
   mongodb:

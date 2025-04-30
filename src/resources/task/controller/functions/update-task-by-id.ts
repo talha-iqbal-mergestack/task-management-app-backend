@@ -8,8 +8,8 @@ export const updateTaskById = catchAsync(
 		let response = { ...constants.defaultServiceResponse };
 
 		const payload = await taskService.updateTaskById({
-			id: req.params.id,
-			body: req.body
+			data: { ...req.body, id: req.params.id },
+			userId: req.user.id
 		});
 		response.status = 200;
 		response.message = constants.taskMessage.TASK_UPDATED;

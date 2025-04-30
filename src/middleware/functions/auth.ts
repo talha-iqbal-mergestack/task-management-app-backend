@@ -7,11 +7,7 @@ import Forbidden from '@utils/errors/forbidden';
 import { NextFunction, Request, Response } from 'express';
 
 export const validateToken = catchAsync(
-	async (
-		req: Request & { user?: string | JwtPayload },
-		res: Response,
-		next: NextFunction
-	) => {
+	async (req: Request, res: Response, next: NextFunction) => {
 		if (!req.headers.authorization) {
 			return next(
 				new Unauthorized(constants.requestValidationMessage.TOKEN_MISSING)
@@ -20,7 +16,7 @@ export const validateToken = catchAsync(
 
 		const token = req.headers.authorization.split(' ')[1].trim();
 		const decoded = jwt.verify(token, process.env.SECRET_KEY!);
-		req.user = decoded;
+		req.user = decoded as JwtPayload;
 		next();
 	}
 );
